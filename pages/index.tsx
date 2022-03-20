@@ -27,11 +27,11 @@ const Home: NextPage = () => {
         </Modal>
       )}
 
-      <section className="overflow-hidden text-gray-700 ">
+      <section className="overflow-hidden text-slate-700 ">
         <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
           <div className="flex flex-wrap -m-1 md:-m-2">
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00001" as="/00001">
                   <a>
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00002" as="/00002">
                   <a>
@@ -63,7 +63,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00003" as="/00003">
                   <a>
@@ -79,7 +79,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00004" as="/00004">
                   <a>
@@ -95,7 +95,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00005" as="/00005">
                   <a>
@@ -111,7 +111,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00006" as="/00006">
                   <a>
@@ -127,7 +127,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00007" as="/00007">
                   <a>
@@ -143,7 +143,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00008" as="/00008">
                   <a>
@@ -159,7 +159,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00009" as="/00009">
                   <a>
@@ -175,7 +175,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00010" as="/00010">
                   <a>
@@ -191,7 +191,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00011" as="/00011">
                   <a>
@@ -207,7 +207,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00012" as="/00012">
                   <a>
@@ -223,7 +223,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00013" as="/00013">
                   <a>
@@ -239,7 +239,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00014" as="/00014">
                   <a>
@@ -255,7 +255,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00015" as="/00015">
                   <a>
@@ -271,7 +271,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00016" as="/00016">
                   <a>
@@ -287,7 +287,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00017" as="/00017">
                   <a>
@@ -303,7 +303,7 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap w-1/6">
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
               <div className="w-full p-1 md:p-2">
                 <Link href="/?image=00018" as="/00018">
                   <a>
@@ -313,6 +313,198 @@ const Home: NextPage = () => {
                       src="/img/00018.jpg"
                       className="block object-cover object-center w-full h-full rounded-sm"
                       alt="Door #00018"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
+              <div className="w-full p-1 md:p-2">
+                <Link href="/?image=00019" as="/00019">
+                  <a>
+                    <Image
+                      width={200}
+                      height={300}
+                      src="/img/00019.jpg"
+                      className="block object-cover object-center w-full h-full rounded-sm"
+                      alt="Door #00019"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
+              <div className="w-full p-1 md:p-2">
+                <Link href="/?image=00020" as="/00020">
+                  <a>
+                    <Image
+                      width={200}
+                      height={300}
+                      src="/img/00020.jpg"
+                      className="block object-cover object-center w-full h-full rounded-sm"
+                      alt="Door #00020"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
+              <div className="w-full p-1 md:p-2">
+                <Link href="/?image=00021" as="/00021">
+                  <a>
+                    <Image
+                      width={200}
+                      height={300}
+                      src="/img/00021.jpg"
+                      className="block object-cover object-center w-full h-full rounded-sm"
+                      alt="Door #00021"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
+              <div className="w-full p-1 md:p-2">
+                <Link href="/?image=00022" as="/00022">
+                  <a>
+                    <Image
+                      width={200}
+                      height={300}
+                      src="/img/00022.jpg"
+                      className="block object-cover object-center w-full h-full rounded-sm"
+                      alt="Door #00022"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
+              <div className="w-full p-1 md:p-2">
+                <Link href="/?image=00023" as="/00023">
+                  <a>
+                    <Image
+                      width={200}
+                      height={300}
+                      src="/img/00023.jpg"
+                      className="block object-cover object-center w-full h-full rounded-sm"
+                      alt="Door #00023"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
+              <div className="w-full p-1 md:p-2">
+                <Link href="/?image=00024" as="/00024">
+                  <a>
+                    <Image
+                      width={200}
+                      height={300}
+                      src="/img/00024.jpg"
+                      className="block object-cover object-center w-full h-full rounded-sm"
+                      alt="Door #00024"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
+              <div className="w-full p-1 md:p-2">
+                <Link href="/?image=00025" as="/00025">
+                  <a>
+                    <Image
+                      width={200}
+                      height={300}
+                      src="/img/00025.jpg"
+                      className="block object-cover object-center w-full h-full rounded-sm"
+                      alt="Door #00025"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
+              <div className="w-full p-1 md:p-2">
+                <Link href="/?image=00026" as="/00026">
+                  <a>
+                    <Image
+                      width={200}
+                      height={300}
+                      src="/img/00026.jpg"
+                      className="block object-cover object-center w-full h-full rounded-sm"
+                      alt="Door #00026"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
+              <div className="w-full p-1 md:p-2">
+                <Link href="/?image=00027" as="/00027">
+                  <a>
+                    <Image
+                      width={200}
+                      height={300}
+                      src="/img/00027.jpg"
+                      className="block object-cover object-center w-full h-full rounded-sm"
+                      alt="Door #00027"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
+              <div className="w-full p-1 md:p-2">
+                <Link href="/?image=00028" as="/00028">
+                  <a>
+                    <Image
+                      width={200}
+                      height={300}
+                      src="/img/00028.jpg"
+                      className="block object-cover object-center w-full h-full rounded-sm"
+                      alt="Door #00028"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
+              <div className="w-full p-1 md:p-2">
+                <Link href="/?image=00029" as="/00029">
+                  <a>
+                    <Image
+                      width={200}
+                      height={300}
+                      src="/img/00029.jpg"
+                      className="block object-cover object-center w-full h-full rounded-sm"
+                      alt="Door #00029"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
+              <div className="w-full p-1 md:p-2">
+                <Link href="/?image=00030" as="/00030">
+                  <a>
+                    <Image
+                      width={200}
+                      height={300}
+                      src="/img/00030.jpg"
+                      className="block object-cover object-center w-full h-full rounded-sm"
+                      alt="Door #00030"
                     />
                   </a>
                 </Link>
