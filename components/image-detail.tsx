@@ -22,7 +22,7 @@ export const ImageDetail = ({ image }: ImageDetailProps) => {
           </Link>
         </nav>
 
-        <div className='flex bg-slate-200 text-slate-600 shadow-xl rounded-sm '>
+        <div className='flex flex-col md:flex-row bg-slate-200 text-slate-600 shadow-xl rounded-sm '>
           <Image
             src={`/img/${image.filename}`}
             alt={image.caption}
@@ -32,8 +32,8 @@ export const ImageDetail = ({ image }: ImageDetailProps) => {
             className="object-cover rounded-l-sm"
           />
 
-          <div className='px-8 w-1/2 relative'>
-            <h2 className='text-2xl py-3 font-medium'>{image.title}</h2>
+          <div className='p-8 w-full md:w-1/2'>
+            <h2 className='text-2xl pb-3 font-medium'>{image.title}</h2>
 
             {image.capturedAt && (
               <p className='py-1 flex items-center'>
