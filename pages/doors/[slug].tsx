@@ -1,11 +1,15 @@
+import fs from 'fs';
+import { GetStaticProps, GetStaticPaths } from 'next'
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { ImageDetail } from "../components/image-detail";
+import { ImageDetail } from "../../components/image-detail";
+import { IImage } from '../../interfaces/image';
+import { buildImageWithMetadata } from '../../utils/image-utils';
 
-export default function ImagePage() {
-  let router = useRouter();
-  let image = router.query.image;
+interface DoorPageProps {
+  image: IImage;
+}
 
+const Door = ({ image }: DoorPageProps) =>{
   return (
     <div className="relative w-screen h-screen bg-slate-600">
       <Link href="/">
@@ -18,13 +22,37 @@ export default function ImagePage() {
       <div className="absolute inset-0">
         <div className="flex items-center justify-center h-screen">
           <div className="w-1/3">
-            <ImageDetail image={String(image)} />
+            <ImageDetail image={image} />
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const filename = `${params?.slug}.jpg`;
+
+  return {
+    props: {
+      image: buildImageWithMetadata(filename)
+    }
+  };
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const files = fs.readdirSync('public/img');
+  const paths = files.map((filename) => ({
+    params: {
+      slug: filename.replace('.jpg', ''),
+    },
+  }));
+
+  return {
+    paths,
+    fallback: 'blocking',
+  };
+};
 
 function BackIcon(props: any) {
   return (
@@ -44,3 +72,5 @@ function BackIcon(props: any) {
     </svg>
   );
 }
+
+export default Door;

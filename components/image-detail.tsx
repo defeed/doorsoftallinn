@@ -1,21 +1,25 @@
 import Image from 'next/image'
+import { IImage } from '../interfaces/image';
 
-interface ImageDetailsProps {
-  image: string;
+interface ImageDetailProps {
+  image: IImage;
 }
 
-export function ImageDetail({ image }: ImageDetailsProps) {
+export const ImageDetail: React.FC<ImageDetailProps> = ({ image }: ImageDetailProps): JSX.Element => {
   return (
     <div className="flex flex-col">
       <Image
-        src={`/img/${image}.jpg`}
-        alt={image}
+        src={`/img/${image.filename}`}
+        alt={image.caption}
         width={600}
         height={900}
-        className="object-cover rounded shadow-lg h-[66vh] w-full"
+        priority={true}
+        className="rounded shadow-lg"
       />
 
-      <p className="text-lg text-gray-200 my-3">Tallinn, Kalamaja, Some street 25</p>
+      <div className="my-3">
+        <p className="text-lg text-gray-200">{image.caption}</p>
+      </div>
     </div>
   );
 }
