@@ -15,7 +15,7 @@ export const Modal = ({ onClose, children }: ModalProps) => {
       open={true}
       onClose={onClose}
       initialFocus={overlayRef}
-      className="fixed inset-0 z-10 flex items-center justify-center"
+      className="fixed inset-0 z-10 flex items-center justify-center overflow-y-auto"
     >
       <Dialog.Overlay
         ref={overlayRef}
