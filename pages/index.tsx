@@ -34,10 +34,9 @@ const Home = ({ images }: HomeProps) => {
         </Modal>
       )}
 
-      <section className="overflow-hidden bg-slate-600 ">
+      <section className="h-screen bg-slate-500 text-slate-300 overflow-scroll">
         <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
           <div className="flex flex-wrap -m-1 md:-m-2">
-
             {images.map(({ filename, slug, caption }) => (
               <div key={slug} className="flex flex-wrap w-1/2 sm:w-1/4 md:w-1/6">
                 <div className="w-full p-1 md:p-2">

@@ -17,5 +17,6 @@ export interface IImage {
   focalLengthIn35mmFilm?: string;
   shutterSpeed?: string;
   apertureValue?: string;
+  isoRating?: string;
   capturedAt?: string;
 }
