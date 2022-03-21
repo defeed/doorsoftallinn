@@ -6,7 +6,7 @@ interface ModalProps {
   children: React.ReactNode;
 }
 
-export function Modal({ onClose, children }: ModalProps) {
+export const Modal = ({ onClose, children }: ModalProps) => {
   let overlayRef = useRef(null);
 
   return (

@@ -12,11 +12,6 @@ interface HomeProps {
   images: IImage[];
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-  const images: IImage[] = getAllImages();
-  return { props: { images } };
-};
-
 const Home = ({ images }: HomeProps) => {
   const router: NextRouter  = useRouter();
   const selectedImage = router.query.slug && images.find((image) => image.slug === router.query.slug);
@@ -39,7 +34,7 @@ const Home = ({ images }: HomeProps) => {
         </Modal>
       )}
 
-      <section className="overflow-hidden text-slate-700 ">
+      <section className="overflow-hidden bg-slate-600 ">
         <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
           <div className="flex flex-wrap -m-1 md:-m-2">
 
@@ -65,6 +60,11 @@ const Home = ({ images }: HomeProps) => {
       </section>
     </>
   )
-}
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const images: IImage[] = getAllImages();
+  return { props: { images } };
+};
 
 export default Home;
