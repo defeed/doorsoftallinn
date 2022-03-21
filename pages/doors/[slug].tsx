@@ -15,7 +15,7 @@ const Door = ({ image }: DoorPageProps) =>{
   return (
     <>
       <Head>
-        <title>Tallinn Doors - {image.title}</title>
+        <title>Doors of Tallinn - {image.title}</title>
         <meta name="description" content="Beautiful doors of Tallinn, Estonia" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

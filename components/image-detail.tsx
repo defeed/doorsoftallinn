@@ -12,7 +12,7 @@ interface ImageDetailProps {
 export const ImageDetail = ({ image }: ImageDetailProps) => {
   return (
     <div className='flex flex-col justify-center items-center'>
-      <div className='m-3'>
+      <div className='mx-3'>
         <nav className='flex'>
           <Link href='/'>
             <a className='flex items-center px-2 py-3 text-sm text-slate-300 hover:text-slate-100'>
@@ -33,7 +33,7 @@ export const ImageDetail = ({ image }: ImageDetailProps) => {
           />
 
           <div className='px-8 w-1/2 relative'>
-            <h2 className='text-2xl py-3'>{image.title}</h2>
+            <h2 className='text-2xl py-3 font-medium'>{image.title}</h2>
 
             {image.capturedAt && (
               <p className='py-1 flex items-center'>
