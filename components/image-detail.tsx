@@ -18,7 +18,7 @@ export const ImageDetail: React.FC<ImageDetailProps> = ({ image }: ImageDetailPr
       />
 
       <div className="my-3">
-        <p className="text-lg text-gray-200">{image.caption}</p>
+        <p className="text-lg text-gray-200">Location: {image.caption}</p>
       </div>
     </div>
   );
