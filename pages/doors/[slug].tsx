@@ -2,6 +2,7 @@ import fs from 'fs';
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head';
 import Link from "next/link";
+import { Header } from '../../components/header';
 import { ImageDetail } from "../../components/image-detail";
 import { IImage } from '../../interfaces/image';
 import { buildImageWithMetadata } from '../../utils/image-utils';
@@ -20,6 +21,7 @@ const Door = ({ image }: DoorPageProps) =>{
       </Head>
 
       <div className='h-screen bg-slate-500 text-slate-300 overflow-scroll'>
+        <Header />
         <ImageDetail image={image} />
     </div>
     </>

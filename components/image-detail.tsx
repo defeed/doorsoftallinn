@@ -2,6 +2,7 @@ import { format, parse } from 'date-fns';
 import Image from 'next/image'
 import Link from 'next/link';
 import { IImage } from '../interfaces/image';
+import { Footer } from './footer';
 import { Back, Time, Globe, Pin, Camera, Lens, Settings } from './icons';
 
 interface ImageDetailProps {
@@ -25,8 +26,8 @@ export const ImageDetail = ({ image }: ImageDetailProps) => {
           <Image
             src={`/img/${image.filename}`}
             alt={image.caption}
-            width={600}
-            height={900}
+            width={550}
+            height={825}
             priority={true}
             className="object-cover rounded-l-sm"
           />
@@ -69,29 +70,15 @@ export const ImageDetail = ({ image }: ImageDetailProps) => {
               <Settings className="w-5 h-5 mr-3" />
               <ul className='flex'>
                 <li className='mr-3'>{image.focalLength}</li>
-                <li className='mr-3'>{image.apertureValue}</li>
+                <li className='mr-3'>f/{parseFloat(image.apertureValue || "0")}</li>
                 <li className='mr-3'>{image.shutterSpeed}s</li>
-                <li className='mr-3'>ISO {image.isoRating}</li>
+                <li className='mr-3'>ISO {String(image.isoRating)}</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <footer>
-          <ul className=' flex justify-end py-3 px-2 text-sm text-slate-300'>
-            <li className='mr-3'>&copy; Artem Pakk</li>
-            <li className='mr-3'>
-              <Link href="/">
-                <a className='underline hover:text-slate-100'>Doors of Tallinn</a>
-              </Link>
-            </li>
-            <li className='mr-3'>
-              <Link href="mailto:apakk@me.com?subject=Doors of Tallinn">
-                <a className='underline hover:text-slate-100'>apakk@me.com</a>
-              </Link>
-            </li>
-          </ul>
-        </footer>
+        <Footer />
       </div>
     </div>
   )
