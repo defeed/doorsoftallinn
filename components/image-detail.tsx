@@ -33,22 +33,22 @@ export const ImageDetail = ({ image }: ImageDetailProps) => {
           />
 
           <div className='p-8 w-full md:w-1/2'>
-            <h2 className='text-2xl pb-3 font-medium'>{image.title}</h2>
+            <h2 className='text-xl md:text-2xl pb-3 font-medium'>{image.title}</h2>
 
             {image.capturedAt && (
-              <p className='py-1 flex items-center'>
-                <Time className="w-5 h-5 mr-3" />
+              <p className='text-sm lg:text-base py-1 flex items-center'>
+                <Time className="w-4 h-4 mr-2" />
                 {format(parse(image.capturedAt, 'yyyy-MM-dd kk:mm:ss', new Date()), 'LLLL d, yyyy')}
               </p>
             )}
 
-            <p className='py-1 flex items-center'>
-              <Globe className="w-5 h-5 mr-3" />
+            <p className='text-sm lg:text-base py-1 flex items-center'>
+              <Globe className="w-4 h-4 mr-2" />
               {image.country}, {image.state}, {image.city}
             </p>
 
-            <p className='py-1 flex items-center'>
-              <Pin className="w-5 h-5 mr-3" />
+            <p className='text-sm lg:text-base py-1 flex items-center'>
+              <Pin className="w-4 h-4 mr-2" />
               <Link href={`http://maps.google.com/?q=${image.gpsLatitude},${image.gpsLongitude}`}>
                 <a target='_blank' className='underline hover:text-slate-500'>
                   {image.sublocation}, {image.caption}
@@ -56,18 +56,18 @@ export const ImageDetail = ({ image }: ImageDetailProps) => {
               </Link>
             </p>
 
-            <p className='py-1 flex items-center'>
-              <Camera className="w-5 h-5 mr-3" />
+            <p className='text-sm lg:text-base py-1 flex items-center'>
+              <Camera className="w-4 h-4 mr-2" />
               {image.cameraMake} {image.cameraModel}
             </p>
 
-            <p className='py-1 flex items-center'>
-              <Lens className="w-5 h-5 mr-3" />
+            <p className='text-sm lg:text-base py-1 flex items-center'>
+              <Lens className="w-4 h-4 mr-2" />
               {image.lensModel}
             </p>
 
-            <div className='py-1 flex items-center'>
-              <Settings className="w-5 h-5 mr-3" />
+            <div className='text-sm lg:text-base py-1 flex items-center'>
+              <Settings className="w-4 h-4 mr-2" />
               <ul className='flex'>
                 <li className='mr-3'>{image.focalLength}</li>
                 <li className='mr-3'>f/{parseFloat(image.apertureValue || "0")}</li>
