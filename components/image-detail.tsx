@@ -22,7 +22,7 @@ export const ImageDetail = ({ image }: ImageDetailProps) => {
           </Link>
         </nav>
 
-        <div className='flex flex-col md:flex-row bg-slate-200 text-slate-600 shadow-xl rounded-sm '>
+        <div className='flex flex-col md:flex-row bg-slate-200 text-slate-600 shadow-xl rounded-sm'>
           <Image
             src={`/img/${image.filename}`}
             alt={image.caption}
