@@ -21,7 +21,7 @@ export const Modal = ({ onClose, children }: ModalProps) => {
         ref={overlayRef}
         className="fixed inset-0 bg-slate-600/90"
       />
-      <div className="relative flex items-center justify-center w-full">
+      <div className="relative flex items-center justify-center">
         {children}
       </div>
     </Dialog>
