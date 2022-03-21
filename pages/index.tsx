@@ -23,7 +23,8 @@ const Home = ({ images }: HomeProps) => {
       <Head>
         <title>Doors of Tallinn</title>
         <meta name="description" content="Beautiful doors of Tallinn, Estonia" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
       </Head>
 
       {selectedImage && (
