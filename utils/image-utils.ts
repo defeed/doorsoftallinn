@@ -38,6 +38,8 @@ export const getAllImages = (): IImage[] => {
   const images = fs
     .readdirSync(IMAGES_DIR)
     .filter((file) => path.extname(file).toLowerCase() === EXTENSION_JPG)
+    .sort()
+    .reverse()
     .map((file) => buildImageWithMetadata(file));
 
   return images;
