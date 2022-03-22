@@ -6,7 +6,7 @@ export const Footer = () => {
     <footer className="py-3 px-2 text-sm text-slate-300">
       <ul className="flex justify-center ">
         <li className='mr-3'>
-          Made with <span className="mr-2">❤️</span> by Artem Pakk
+          Made with ❤️ by Artem Pakk
         </li>
 
         <li className='mr-3'>
