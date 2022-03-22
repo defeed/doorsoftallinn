@@ -10,7 +10,7 @@ interface ImageDetailProps {
   image: IImage;
 }
 
-export const ImageDetail = ({ standalone = false, image }: ImageDetailProps) => {
+export const ImageDetail = ({ standalone = true, image }: ImageDetailProps) => {
   return (
     <div className='flex flex-col justify-center items-center'>
       <div className='mx-3'>
