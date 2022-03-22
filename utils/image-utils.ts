@@ -1,8 +1,10 @@
 import ExifReader from "exifreader";
 import fs from "fs";
+import path from "path";
 import { IImage } from "../interfaces/image";
 
 const IMAGES_DIR = "public/img";
+const EXTENSION_JPG = ".jpg";
 
 export const buildImageWithMetadata = (filename: string): IImage => {
   const buffer = fs.readFileSync(`${IMAGES_DIR}/${filename}`);
@@ -33,10 +35,10 @@ export const buildImageWithMetadata = (filename: string): IImage => {
 };
 
 export const getAllImages = (): IImage[] => {
-  const files = fs.readdirSync(IMAGES_DIR);
-  const images = files.map((filename) => {
-    return buildImageWithMetadata(filename);
-  });
+  const images = fs
+    .readdirSync(IMAGES_DIR)
+    .filter((file) => path.extname(file).toLowerCase() === EXTENSION_JPG)
+    .map((file) => buildImageWithMetadata(file));
 
   return images;
 }
