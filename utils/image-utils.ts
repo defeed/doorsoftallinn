@@ -27,6 +27,7 @@ export const buildImageWithMetadata = (filename: string): IImage => {
     focalLengthIn35mmFilm: exif?.FocalLengthIn35mmFilm?.description,
     shutterSpeed: exif?.ShutterSpeedValue?.description,
     apertureValue: exif?.ApertureValue?.description,
+    isoRating: exif?.ISOSpeedRatings?.description,
     capturedAt: `${iptc?.['Date Created']?.description} ${iptc?.['Time Created']?.description}`
   }
 };
