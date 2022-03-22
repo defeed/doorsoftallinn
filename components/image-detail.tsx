@@ -6,7 +6,7 @@ import { Footer } from './footer';
 import { Back, Time, Globe, Pin, Camera, Lens, Settings } from './icons';
 
 interface ImageDetailProps {
-  standalone: boolean;
+  standalone?: boolean;
   image: IImage;
 }
 
