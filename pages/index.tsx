@@ -33,7 +33,7 @@ const Home = ({ images }: HomeProps) => {
             router.push("/");
           }}
         >
-          <ImageDetail image={selectedImage} />
+          <ImageDetail standalone={false} image={selectedImage} />
         </Modal>
       )}
 

@@ -6,21 +6,24 @@ import { Footer } from './footer';
 import { Back, Time, Globe, Pin, Camera, Lens, Settings } from './icons';
 
 interface ImageDetailProps {
+  standalone: boolean;
   image: IImage;
 }
 
-export const ImageDetail = ({ image }: ImageDetailProps) => {
+export const ImageDetail = ({ standalone = false, image }: ImageDetailProps) => {
   return (
     <div className='flex flex-col justify-center items-center'>
       <div className='mx-3'>
-        <nav className='flex'>
-          <Link href='/'>
-            <a className='flex items-center px-2 py-3 text-sm text-slate-300 hover:text-slate-100'>
-              <Back className="w-5 h-5 mr-2" />
-              Back
-            </a>
-          </Link>
-        </nav>
+        {standalone && (
+          <nav className='flex'>
+            <Link href='/'>
+              <a className='flex items-center px-2 py-3 text-sm text-slate-300 hover:text-slate-100'>
+                <Back className="w-5 h-5 mr-2" />
+                Back
+              </a>
+            </Link>
+          </nav>
+        )}
 
         <div className='flex flex-col md:flex-row bg-slate-200 text-slate-600 shadow-xl rounded-sm'>
           <Image
