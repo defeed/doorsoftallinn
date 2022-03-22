@@ -10,7 +10,7 @@ export const buildImageWithMetadata = (filename: string): IImage => {
 
   return {
     filename,
-    slug: filename.replace('.jpg', ''),
+    slug: String(Number(filename.replace('.jpg', ''))),
     title: iptc?.['Object Name']?.description,
     caption: exif?.ImageDescription?.description,
     gpsLatitude: exif?.GPSLatitude?.description,
