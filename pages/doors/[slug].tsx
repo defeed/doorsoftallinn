@@ -30,7 +30,9 @@ const Door = ({ image }: DoorPageProps) =>{
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const filename = `${params?.slug}.jpg`;
+  const slug = params?.slug as string;
+  const padded = slug.padStart(5, "0")
+  const filename = `${padded}.jpg`;
 
   return {
     props: {
