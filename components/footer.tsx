@@ -5,12 +5,8 @@ export const Footer = () => {
   return (
     <footer className="py-3 px-2 text-sm text-slate-300">
       <ul className="flex justify-center ">
-        <li className='mr-3'>
-          Made with ❤️ by Artem Pakk
-        </li>
-
-        <li className='mr-3'>
-
+        <li className='mr-5'>
+          Made with <span className="emoji">❤️</span> by Artem Pakk
         </li>
 
         <li className='mr-5'>

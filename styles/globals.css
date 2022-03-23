@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fix for Chrome on low DPI screens not showing margin on the right from emoji */
+@media
+  not screen and (min-device-pixel-ratio: 2),
+  not screen and (min-resolution: 192dpi) {
+    span.emoji {
+      margin-right: 5px;
+    }
+  }
