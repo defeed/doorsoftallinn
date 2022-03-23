@@ -45,7 +45,7 @@ const Home = ({ images }: HomeProps) => {
             {images.map(({ filename, slug, caption }) => (
               <div key={slug} className="flex flex-wrap text-center w-1/2 sm:w-1/4 md:w-1/6">
                 <div className="w-full p-1 md:p-2">
-                  <Link href={`/?slug=${slug}`} as={`/doors/${slug}`}>
+                  <Link href={`/?slug=${slug}`} as={`/door/${slug}`}>
                     <a>
                       <Image
                         width={200}
