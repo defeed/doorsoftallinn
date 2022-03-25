@@ -52,22 +52,20 @@ export const getAllImageFiles = (): string[] => {
 export const getStreetNames = (): string[] => {
   const imageFiles = getAllImageFiles();
 
-  const streetsNames: string[] = imageFiles.map((filename) => {
+  const streetNames: string[] = imageFiles.map((filename) => {
     const image = buildImageWithMetadata(filename);
     const { caption } = image;
 
     return caption?.split(" ")[0] as string;
   });
 
-  return sortedUniq(streetsNames.sort());
+  return sortedUniq(streetNames.sort());
 };
 
 export const getStreetNameSlugs = (): string[] => {
-  const streetsNames = getStreetNames();
+  const streetNames = getStreetNames();
 
-  console.log(">>> STREETNAMES", streetsNames);
-
-  const slugs = streetsNames.map((streetName) => {
+  const slugs = streetNames.map((streetName) => {
     return streetName
       .toLowerCase()
       .replaceAll("ä", "a")
