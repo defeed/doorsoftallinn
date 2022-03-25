@@ -1,11 +1,9 @@
-import fs from 'fs';
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head';
-import Link from "next/link";
 import { Header } from '../../components/header';
 import { ImageDetail } from "../../components/image-detail";
 import { IImage } from '../../interfaces/image';
-import { buildImageWithMetadata } from '../../utils/image-utils';
+import { buildImageWithMetadata, getAllImageFiles } from '../../utils/image-utils';
 
 interface DoorPageProps {
   image: IImage;
@@ -30,7 +28,7 @@ const Door = ({ image }: DoorPageProps) =>{
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params?.slug as string;
+  const slug = params?.doorSlug as string;
   const padded = slug.padStart(5, "0")
   const filename = `${padded}.jpg`;
 
@@ -42,10 +40,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const files = fs.readdirSync('public/img');
+  const files = getAllImageFiles()
   const paths = files.map((filename) => ({
     params: {
-      slug: filename.replace('.jpg', ''),
+      doorSlug: filename.replace('.jpg', ''),
     },
   }));
 

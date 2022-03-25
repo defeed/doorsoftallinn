@@ -1,7 +1,9 @@
 import ExifReader from "exifreader";
 import fs from "fs";
+import { sortedUniq } from "lodash";
 import path from "path";
 import { IImage } from "../interfaces/image";
+import { IStreet } from "../interfaces/street";
 
 const IMAGES_DIR = "public/img";
 const EXTENSION_JPG = ".jpg";
@@ -34,13 +36,59 @@ export const buildImageWithMetadata = (filename: string): IImage => {
   }
 };
 
-export const getAllImages = (): IImage[] => {
-  const images = fs
+export const buildAllImagesWithMetadata = (): IImage[] => {
+  const imageFiles = getAllImageFiles();
+  return imageFiles.map((file) => buildImageWithMetadata(file));
+};
+
+export const getAllImageFiles = (): string[] => {
+  return fs
     .readdirSync(IMAGES_DIR)
     .filter((file) => path.extname(file).toLowerCase() === EXTENSION_JPG)
     .sort()
-    .reverse()
-    .map((file) => buildImageWithMetadata(file));
+    .reverse();
+};
 
-  return images;
-}
+export const getStreetNames = (): string[] => {
+  const imageFiles = getAllImageFiles();
+
+  const streetsNames: string[] = imageFiles.map((filename) => {
+    const image = buildImageWithMetadata(filename);
+    const { caption } = image;
+
+    return caption?.split(" ")[0] as string;
+  });
+
+  return sortedUniq(streetsNames.sort());
+};
+
+export const getStreetNameSlugs = (): string[] => {
+  const streetsNames = getStreetNames();
+
+  const slugs = streetsNames.map((streetName) => {
+    return streetName
+      .toLowerCase()
+      .replaceAll("ä", "a")
+      .replaceAll("ö", "o")
+      .replaceAll("ü", "u")
+      .replaceAll("õ", "o");
+  });
+
+  return slugs;
+};
+
+export const getStreets = (): IStreet[] => {
+  const streetNames = getStreetNames();
+
+  const streets = streetNames.map((name) => {
+    const slug = name.toLowerCase()
+      .replaceAll("ä", "a")
+      .replaceAll("ö", "o")
+      .replaceAll("ü", "u")
+      .replaceAll("õ", "o");
+
+    return { slug, name};
+  });
+
+  return streets;
+};
