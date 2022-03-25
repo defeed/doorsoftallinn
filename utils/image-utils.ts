@@ -65,6 +65,8 @@ export const getStreetNames = (): string[] => {
 export const getStreetNameSlugs = (): string[] => {
   const streetsNames = getStreetNames();
 
+  console.log(">>> STREETNAMES", streetsNames);
+
   const slugs = streetsNames.map((streetName) => {
     return streetName
       .toLowerCase()
